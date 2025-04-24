@@ -3,6 +3,7 @@
         
     </div>
     <div class="col-4">
+        <p>Nikhil Singh Mahara</p>
 
     </div>
     <div class="col-4">
@@ -18,13 +19,25 @@
                 <!-- Interpolation -->
                 <h4>{{courseName}}</h4>
                 <input type="text" value="{{courseName}}" placeholder="Enter text">
+                <input type="{{inputType}}" name="{{courseName}}"> what is ypur name
+                
+                
+            </div>
+            <div class="col-4">
+                <div [class]="myClassName">Danger</div>
             </div>
         </div>
     </div>
     <div class="col-4">
-
+        <button class="btn btn-success" (click)="showalert('Welcome Angular 18')">show Welcome</button>
+        <span (click)="showalert('This is coming from span')">Welcone</span>
+        <button class="btn btn-success" (click)="changeCourseName()">Change the course Name</button>
     </div>
     <div class="col-4">
+        <input type="text" [(ngModel)] = "courseName"/> - {{courseName}}
+    </div>
 
+    <div class="col-6">
+        <h2>{{firstname()}}</h2>
     </div>
 </div>
